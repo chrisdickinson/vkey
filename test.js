@@ -1,9 +1,10 @@
 var vkey = require('./index')
 
 document.body.innerHTML = '<p>Type into the input box. \
-                          You should see the lowercased version of what key you last typed. \
-                          If you note an inconsistency, fix it and make a PR against <a href="https://github.com/chrisdickinson/vkey">the vkey repo.</a>'
-
+                           You should see either the uppercase letter or lowercase symbol you just typed.<br />\
+                           Or, if it\'s a control key, you should see the <code>&lt;name&gt;</code> of the key. <br />\
+                           If you note an inconsistency, <a href="https://github.com/chrisdickinson/vkey/issues">open an issue on the vkey repo.</a><br />\
+                           Please include your <strong>browser and version</strong>, <strong>operating system</strong>, and if possible your <strong>keyboard type</strong>.'
 
 document.body.appendChild(document.createElement('input'))
 
