@@ -1,10 +1,10 @@
 {
   "name": "vkey",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "map ev.keyCode to human names",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "echo \"open localhost:3030/\" && ./node_modules/.bin/browservefy test.js 3030 -- -d"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   ],
   "author": "Chris Dickinson <chris@neversaw.us>",
   "license": "MIT",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "browservefy": "0.0.3",
+    "browserify": "~1.17.3"
+  }
 }
