@@ -1,5 +1,10 @@
+var ua = typeof window !== 'undefined' ? window.navigator.userAgent : ''
+  , isOSX = /OS X/.test(ua)
+  , isOpera = /Opera/.test(ua)
+  , maybeFirefox = !/like Gecko/.test(ua) && !isOpera
+
 var i, output = module.exports = {
-  0:  '<UNK>'
+  0:  isOSX ? '<menu>' : '<UNK>'
 , 1:  '<mouse 1>'
 , 2:  '<mouse 2>'
 , 3:  '<break>'
@@ -41,9 +46,9 @@ var i, output = module.exports = {
 , 45: '<insert>'
 , 46: '<delete>'
 , 47: '<help>'
-, 91: '<meta-left>'
-, 92: '<meta-right>'
-, 93: '<menu>'
+, 91: '<meta>'  // meta-left -- no one handles left and right properly, so we coerce into one.
+, 92: '<meta>'  // meta-right
+, 93: isOSX ? '<meta>' : '<menu>'      // chrome,opera,safari all report this for meta-right (osx mbp).
 , 95: '<sleep>'
 , 106: '<num-*>'
 , 107: '<num-+>'
@@ -66,7 +71,9 @@ var i, output = module.exports = {
 , 170: '<browser-search>'
 , 171: '<browser-favorites>'
 , 172: '<browser-home>'
-, 173: '<volume-mute>'
+
+  // ff/osx reports '<volume-mute>' for '-'
+, 173: isOSX && maybeFirefox ? '-' : '<volume-mute>'
 , 174: '<volume-down>'
 , 175: '<volume-up>'
 , 176: '<next-track>'
@@ -89,9 +96,10 @@ var i, output = module.exports = {
 , 221: ']'
 , 222: "'"
 , 223: '<meta>'
+, 224: '<meta>'       // firefox reports meta here.
 , 226: '<alt-gr>'
 , 229: '<ime-process>'
-, 231: '<unicode>'
+, 231: isOpera ? '`' : '<unicode>'
 , 246: '<attention>'
 , 247: '<crsel>'
 , 248: '<exsel>'
@@ -101,6 +109,10 @@ var i, output = module.exports = {
 , 252: '<no-name>'
 , 253: '<pa-1>'
 , 254: '<clear>'
+}
+
+for(i = 58; i < 65; ++i) {
+  output[i] = String.fromCharCode(i)
 }
 
 // 0-9
