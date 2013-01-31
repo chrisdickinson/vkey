@@ -1,0 +1,23 @@
+{
+  "name": "vkey",
+  "version": "0.0.0",
+  "description": "map ev.keyCode to human names",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisdickinson/vkey.git"
+  },
+  "keywords": [
+    "keyCode",
+    "keyboard",
+    "key",
+    "virtual",
+    "vkey"
+  ],
+  "author": "Chris Dickinson <chris@neversaw.us>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}
