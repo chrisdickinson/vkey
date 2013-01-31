@@ -16,6 +16,8 @@ cobbled together from [Benvie's Keyboard](https://github.com/Benvie/Keyboard) an
 
 ## contributing / making life better for everyone
 
+**EASY MODE, Step 0**: Visit [the test page](http://didact.us/vkey/). Go to **Step 2**.
+
 **Step 1**: get the repo and run the test site.
 
 ```bash
