@@ -45,8 +45,8 @@ mash keys! note inconsistencies!
 
 ## deviations thus far
 
-* meta left and right are reduced to <meta>, because no one really seems to support it correctly.
-* <unk> is coerced to <menu> on OSX, since it has no idea what that button is (using a dell keyboard.)
+* meta left and right are reduced to `<meta>`, because no one really seems to support it correctly.
+* `<unk>` is coerced to `<menu>` on OSX, since it has no idea what that button is (using a dell keyboard.)
 
 # license
 
