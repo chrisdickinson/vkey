@@ -1,6 +1,6 @@
 {
   "name": "vkey",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "map ev.keyCode to human names",
   "main": "index.js",
   "scripts": {
