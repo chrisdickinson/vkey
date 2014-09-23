@@ -29,7 +29,6 @@ var i, output = module.exports = {
 , 29: '<ime-nonconvert>'
 , 30: '<ime-accept>'
 , 31: '<ime-mode-change>'
-, 27: '<escape>'
 , 32: '<space>'
 , 33: '<page-up>'
 , 34: '<page-down>'
