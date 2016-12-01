@@ -1,3 +1,5 @@
+'use strict'
+
 var ua = typeof window !== 'undefined' ? window.navigator.userAgent : ''
   , isOSX = /OS X/.test(ua)
   , isOpera = /Opera/.test(ua)
@@ -29,7 +31,6 @@ var i, output = module.exports = {
 , 29: '<ime-nonconvert>'
 , 30: '<ime-accept>'
 , 31: '<ime-mode-change>'
-, 27: '<escape>'
 , 32: '<space>'
 , 33: '<page-up>'
 , 34: '<page-down>'
